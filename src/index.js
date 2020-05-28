@@ -35,7 +35,7 @@ async function main() {
    * use the following payload format
    */
   const exampleBody = {
-    adress: "yourmail@example.com",
+    address: "yourmail@example.com",
     temperature: 24,
   };
 }
