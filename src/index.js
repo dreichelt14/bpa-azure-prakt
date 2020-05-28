@@ -8,7 +8,7 @@ import {
 } from "@azure/event-hubs";
 
 async function main() {
-  console.log("---Start processing Events---")
+  console.log("---Start processing Events---");
   //Get consumer connection settings
   const { CONNECTION_CONSUMER, CONSUMER_GROUP } = process.env;
   /**
@@ -24,11 +24,21 @@ async function main() {
   const producer = undefined;
 
   /**
+   * Consumer
    * @todo Subscribe to Temperature - Event Hub and evaluate incoming Events
-   * @todo Emit new Events to Temperature-Warning Event Hub
    */
-}
 
+  /**
+   * Producer
+   * @todo Emit new event if temperature is critical over time.
+   * 
+   * use the following payload format
+   */
+  const exampleBody = {
+    adress: "yourmail@example.com",
+    temperature: 24,
+  };
+}
 main().catch((err) => {
   console.error("Error occurred: ", err);
 });
